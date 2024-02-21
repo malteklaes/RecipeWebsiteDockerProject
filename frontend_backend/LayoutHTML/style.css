@@ -1,0 +1,21 @@
+background-color: #000000; /* rot */
+
+
+.header-nav {
+    background-color: #FF0000; /* Hintergrundfarbe rot */
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header-nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* Schriftfarbe weiß */
+}

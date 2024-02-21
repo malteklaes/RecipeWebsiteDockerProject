@@ -1,0 +1,65 @@
+version: '3.6'
+
+services:
+
+  dbSQL:
+    image: mysql:latest
+    container_name: recipeWebsiteSQL
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pwd
+      - MYSQL_ROOT_PASSWORD=pwd
+      - MYSQL_DATABASE=RecipeWebsiteDB
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+  phpmyadmin:
+    depends_on:
+        - dbSQL
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8001:80"
+    environment:
+      - PMA_HOST=dbSQL
+      - PMA_PORT=3306
+
+
+
+
+
+
+
+
+  docker-mongo:
+    platform: linux/amd64
+    image: mongo:latest
+    container_name: recipeWebsite_MongoDB
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: pwd
+      MONGO_INITDB_DATABASE: RecipeWebsiteMongoDB
+    ports:
+      - "27017:27017" 
+
+  frontend:
+    build: ./frontend_backend
+    container_name: recipeWebsite_frontend_backend
+    restart: always
+    expose:
+     - 80
+    volumes:
+      - ./frontend_backend:/var/www/html/
+      
+  nginx:
+    image: nginx:1.21.5-alpine
+    container_name: nginx_UI-recipeWebsite
+    restart: always
+    ports:
+      - "80:8000" 
+    volumes: 
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+
+        
+volumes:
+  mysql-data:
+
+
