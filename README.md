@@ -6,6 +6,7 @@ A website where you can manage (add, remove, update, delete, filter, ...) recipe
 - **Migrate database while running**: between the **two database systems** (**MySQL**, **MongoDB**) while the website is up and running (MySQL as relational database management systems/**SQL** and MongoDB as document-oriented database management systems/**NoSQL**)
 - PHP (pure, backend and frontend) and NGINX
 - team project together with *Mariia Ermeichuk*
+- technical stack:
 
 <img src="./img/softare_stack.png" alt="BILD" style="width:200%; border:0; float:left, margin:5px" >
 
