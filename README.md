@@ -3,7 +3,7 @@
 ## about
 A website where you can manage (add, remove, update, delete, filter, ...) recipes for dishes and assign them to recipe books (collections), which can also be managed. The main focus of this project - as a university project (University of Vienna) (Information Management & Systems Engineering, authors: Prof. Erich Schikuta, Dipl.-Ing. Ralph Vigne, summer semester 2023) - is on the technology stack (*Docker, DB: SQL vs NoSQL*):
 - **Docker**
-- **Migrate database while running**: between the **two database systems** (**MySQL**, **MongoDB**) while the website is up and running (MySQL as relational database management systems/**SQL** and MongoDB as relational database management systems/**NoSQL**)
+- **Migrate database while running**: between the **two database systems** (**MySQL**, **MongoDB**) while the website is up and running (MySQL as relational database management systems/**SQL** and MongoDB as document-oriented database management systems/**NoSQL**)
 - PHP (pure, backend and frontend) and NGINX
 - team project together with *Mariia Ermeichuk*
 
